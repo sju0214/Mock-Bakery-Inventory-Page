@@ -1,0 +1,88 @@
+### CREATE five documents.
+POST http://localhost:3000/bakedGoods HTTP/1.1
+content-type: application/json
+
+{
+    "item": "Chocolate Chip Cookie",
+    "dateMade": "2023-08-12",
+    "expiration": "2023-11-12",
+    "inventoryStock": 24
+}
+
+
+### CREATE 2
+POST http://localhost:3000/bakedGoods HTTP/1.1
+content-type: application/json
+
+{
+    "item": "Blueberry Muffin",
+    "dateMade": "2023-08-12",
+    "expiration": "2023-10-12",
+    "inventoryStock": 12
+}
+
+### CREATE 3
+POST http://localhost:3000/bakedGoods HTTP/1.1
+content-type: application/json
+
+{
+    "item": "Butter Crossiant",
+    "dateMade": "2023-05-12",
+    "expiration": "2023-12-12",
+    "inventoryStock": 30
+}
+
+### CREATE 4
+POST http://localhost:3000/bakedGoods HTTP/1.1
+content-type: application/json
+
+{
+    "item": "Pumpkin Scone",
+    "dateMade": "2023-03-12",
+    "expiration": "2023-04-12",
+    "inventoryStock": 6
+}
+
+### CREATE 5
+POST http://localhost:3000/bakedGoods HTTP/1.1
+content-type: application/json
+
+{
+    "item": "Red Velvet Cupcake",
+    "dateMade": "2023-01-12",
+    "expiration": "2023-03-12",
+    "inventoryStock": 24
+}
+
+
+### RETRIEVE all documents.
+GET http://localhost:3000/bakedGoods HTTP/1.1
+
+
+
+### RETRIEVE a document by its ID.
+### Replace the following ID with one that exists in the collection.
+GET http://localhost:3000/bakedGoods/656d6b9453028698805413b6 HTTP/1.1
+
+
+### UPDATE one document's inventoryStock, by ID.
+### Replace the ID in the following request with one that exists
+### and update the inventoryStock:
+PUT http://localhost:3000/bakedGoods/656d6b9353028698805413b4 HTTP/1.1
+content-type: application/json
+
+{
+    "item": "Blueberry Muffin",
+    "dateMade": "2023-08-12",
+    "expiration": "2023-10-12",
+    "inventoryStock": 6
+}
+
+### DELETE by ID (responds with nothing if successful):
+DELETE http://localhost:3000/bakedGoods/656d6b15530286988054139c HTTP/1.1
+
+
+
+### RETRIEVE all documents (responds with 4 or the original 5):
+GET http://localhost:3000/bakedGoods HTTP/1.1
+
